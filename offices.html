@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="shortcut icon" href="img/urslogo.png">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <title>urs taytay</title>
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="navbar">
+                <div class="logo">
+                    <img src="img/urslogo.png">
+                        <nav>
+                            <ul id="MenuItems">
+                                <li><a href="index.html"><i class='bx bx-home'></i></i>Home</a></li>
+                                <li><a href="administration.html"><i class='bx bx-group'></i>Administration</a>
+                                <div class="sub-menu">
+                                    <ul>
+                                        <li><a href="officials.html">Officials</a></li>
+                                        <li><a href="offices.html">Offices</a></li>
+                                        <li><a href="courses.html">Academic Programs</a></li>
+                                        <li><a href="org.html">Organizations</a></li>
+                                        <li><a href="facilities.html">Facilities</a></li>
+                                    </ul>
+                                </div>
+                                </li>
+                                <li><a href="news.html"><i class='bx bxs-news'></i>News and Updates</a>
+                                    <div class="sub-menu">
+                                        <ul>
+                                            <li><a href="news.html">Announcements</a></li>
+                                            <li><a href="#">Features</a></li>
+                                        </ul>
+                                    </div>
+                                </li>                                
+                                <li><a href="about.html"><i class='bx bxs-offer'></i>About URS Taytay</a>
+                                    <div class="sub-menu">
+                                        <ul>
+                                            <li><a href="history.html">History</a></li>
+                                            <li><a href="seal.html">Seal</a></li>
+                                            <li><a href="vmgo.html">VMGO</a></li>
+                                            <li><a href="qp.html">Quality Policy</a></li>
+                                            <li><a href="contact.html">Contacts</a></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </nav>
+                    <img src="img/menu.png" width="55" height="60" class="menu-icon" onclick="menutoggle()">
+                </div>
+            </div>
+
+            <div class="offices">
+                <h2>OFFICES</h2>
+                <div class="urst-offices">
+                    <img src="offices/guidance.jpg" alt="">
+                    <div class="name">
+                        <h3>GUIDANCE OFFICE</h3>
+                    </div>
+                </div>
+                <div class="urst-offices">
+                    <img src="offices/faculty.jpg" alt="">
+                    <div class="name">
+                        <h3>FACULTY ROOM</h3>
+                    </div>
+                </div>
+                <div class="urst-offices">
+                    <img src="offices/hrmo.jpg" alt="">
+                    <div class="name">
+                        <h3>HRMO</h3>
+                    </div>
+                </div>
+                <div class="urst-offices">
+                    <img src="offices/medical.jpg" alt="">
+                    <div class="name">
+                        <h3>MEDICAL UNIT</h3>
+                    </div>
+                </div>
+                <div class="urst-offices">
+                    <img src="offices/gad.jpg" alt="">
+                    <div class="name">
+                        <h3>GAD / OPA / PARC</h3>
+                    </div>
+                </div>
+                <div class="urst-offices">
+                    <img src="offices/accreditation.jpg" alt="">
+                    <div class="name">
+                        <h3>ACCREDITATION <br> ROOM</h3>
+                    </div>
+                </div>
+                <div class="urst-offices">
+                    <img src="offices/scholar.jpg" alt="">
+                    <div class="name">
+                        <h3>NSTP / ADMISSION <br> SCHOLARSHIP <br> OFFICE</h3>
+                    </div>
+                </div>
+                <div class="urst-offices">
+                    <img src="offices/science.jpg" alt="">
+                    <div class="name">
+                        <h3>SCIENCE <br> LABORATORY</h3>
+                    </div>
+                </div>
+            </div>
+                                 
+        </div>
+    </div>
+</body>
+
+<script>
+    var MenuItems = document.getElementById("MenuItems");
+
+    MenuItems.style.maxHeight = "0px";
+
+    function menutoggle(){
+        if (MenuItems.style.maxHeight == "0px")
+            {
+                MenuItems.style.maxHeight = "200px";
+            }
+        else
+            {
+                MenuItems.style.maxHeight = "0px";
+            }
+    }
+
+    AOS.init();
+</script>
+</html>

@@ -1,0 +1,1633 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url(img/bg.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+}
+ 
+
+.navbar {
+    background: rgba(10, 23, 62, 0.5);
+    backdrop-filter: blur(3px);
+    padding: 15px;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar .logo img {
+    margin-top: 15px;
+    margin-left: 40px;
+    cursor: pointer;
+    width: 100px;
+}
+
+nav ul li{
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    margin-right: 100px;
+}
+
+
+nav ul li::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background: red;
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    transition: 0.3s;
+}
+
+nav ul li:hover::after {
+    width: 100%;
+}
+
+nav a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: red;
+}
+
+.sub-menu {
+    display: none;
+}
+
+nav ul li:hover .sub-menu {
+    display: block;
+    position: absolute;
+    margin-top: 5px;
+    background: rgba(10, 23, 62, 1);
+    backdrop-filter: blur(3px);
+    z-index: 1;
+    border-radius: 10px;
+}
+
+nav ul li:hover .sub-menu ul {
+    display: block;
+    margin: 10px;
+} 
+
+nav ul li:hover .sub-menu li {
+    width: 100px;
+    padding: 6px;
+}
+
+nav ul li:hover .sub-menu a {
+    color: white;
+}
+
+
+.menu-icon {
+    margin-right: 30px;
+    cursor: pointer;
+    display: none;
+}
+
+.content {
+    margin-top: 150px;
+    line-height: 90px;
+    text-align: center;
+    background: rgba(10, 23, 62, 0.4);
+}
+
+.content h1 {
+    color: white;
+    font-size: 70px;
+    font-weight: 900;
+    animation: fadeInAnimation ease 3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+     }
+}
+
+.navbar .bx {
+    margin-right: 10px;
+    font-size: 25px;
+}
+
+.content h2 {
+    color: gold;
+    margin-top: 10px;
+    font-size: 40px;
+    font-weight: 700;
+    white-space: nowrap; 
+    margin: 0 auto;
+    letter-spacing: .15em; 
+    animation: typing 3s steps(40, end),
+    blink-caret 0.5s step-end infinite;
+    overflow: hidden;
+    animation-delay: 0.5s;
+}
+
+
+@keyframes typing{
+    from { width: 0 }  
+    to { width: 100%;}
+  }
+
+.content p {
+    font-size: 35px;
+    font-family: sans-serif;
+    color: white;
+    font-weight: 600;
+    white-space: nowrap; 
+    margin: 0 auto;
+    letter-spacing: .15em; 
+    animation: typing 5s steps(40, end),
+    blink-caret 0.75s step-end infinite;
+    overflow: hidden;
+    animation-delay: 1s;
+}
+
+@media only screen and (max-width: 1300px) {
+    
+
+    nav ul {
+        position: absolute;
+        top: 125px;
+        left: 0;
+        background: #333;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.3s;
+        
+    }
+
+    nav ul li {
+        display: block;
+        margin-right: 50px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        text-align: right;
+    }
+    
+    nav ul li:hover::after {
+        width: 0;
+    }
+
+    nav ul li a {
+        color: white;
+        font-weight: normal;
+    }
+
+    nav ul li a:hover {
+        color: red;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+    }
+
+    .navbar .logo img {
+        width: 60px;
+        
+    }
+
+    .content {
+        margin-top: 150px;
+        line-height: 120px;
+    }
+
+    .content h1 {
+        font-size: 40px;
+    }
+
+    .content h2 {
+        font-size: 30px;
+       
+    }
+
+    .content p {
+        font-size: 15px;
+        width: 100%;
+
+    }
+
+}
+
+
+/*this is for about.html*/
+
+
+.history {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-45deg, rgba(150, 215, 227, 0.4), rgba(10, 23, 62, 0.8));
+    text-align: center;
+    justify-content: center;
+    margin-top: 12%;
+}
+
+.history h3 {
+    color: white;
+    text-align: center;
+    font-size: 70px;
+    line-height: 100px;
+    font-family: Anton;
+}
+
+.context {
+    width: 100%;
+    height: 100vh;
+    text-align: center;
+    position: relative;
+}
+
+.context p{
+    font-size: 15px;
+    color: white;
+}
+
+.context p:nth-child(1) {
+    text-align: center;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top: 10%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 2px;
+}
+
+.context p:nth-child(2) {
+    text-align: center;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top: 28%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 2px;
+}
+
+.context p:nth-child(3) {
+    text-align: center;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 2px;
+}
+
+.context p:nth-child(4) {
+    text-align: center;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 2px;
+}
+
+.context p:nth-child(5) {
+    text-align: center;
+    font-weight: 600;
+    position: absolute;
+    left: 50%;
+    top: 60%;
+    transform: translate(-50%, -50%);
+    letter-spacing: 2px;
+}
+
+#seal {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(45deg,rgba(10, 23, 62, 1),rgba(198, 198, 198, 0.38), rgba(10, 23, 62, 1));
+    position: relative;
+    padding-top: 10%;   
+}
+
+#seal img {
+    width: 300px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 18%;
+    transform: translate(-50%, -50%);
+}
+
+#seal h3 {
+    color: white;
+    text-align: left;
+    font-size: 40px;
+    position: absolute;
+    top: 6%;
+    left: 5%;
+    font-family: Anton;
+}
+
+#seal table {
+    width: 60%;
+}
+
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    position: absolute;
+    margin-left: 80px;
+    text-align: center;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+}
+
+tr, td {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 10px;
+    margin-right: 50px;
+    font-weight: 600;
+    color: white;
+}
+
+table .row {
+    color: white;
+}
+
+
+.vmgo {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(90deg,rgba(10, 23, 62, 0.5),rgba(198, 198, 198, 0.38), rgba(10, 23, 62, 0.5));
+    display: flex;
+    text-align: center;
+    justify-content: space-evenly;
+    padding-top: 5%;
+}
+
+.vision {
+    width: 400px;
+    height: 560px;
+    background:  rgba(198, 198, 198, 0.2);
+    text-align: center;
+    border-radius: 10px;
+    padding: 0 30px;
+}
+
+.vision h3 {
+    line-height: 100px;
+    font-size: 40px;
+    color: rgb(11, 22, 54);
+    font-family: Arial;
+}
+
+.vision p {
+    line-height: 40px;
+    font-weight: 600;
+    font-family: arial;
+    text-align: justify;
+    font-size: 25px;
+    color: white;
+}
+
+.quality-policy {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(180deg, rgba(150, 215, 227, 0.4), rgba(10, 23, 62, 0.8));
+    text-align: center;
+    padding-top: 10%;
+}
+
+.quality-policy h3 {
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 100px;
+    color: rgba(10, 23, 62, 1);
+}
+
+.qp {
+   display: grid;
+   justify-content: center;
+   place-items: center;
+   padding-top: 50px;
+}
+
+.qp p {
+    line-height: 40px;
+    font-size: 40px;
+    color: white;
+    font-family: anton;
+}
+
+.contact {
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-45deg, rgba(150, 215, 227, 0.4), rgba(10, 23, 62, 1));
+    padding-top: 5%;
+    text-align: center;
+}
+
+.contact h3 {
+    font-size: 70px;
+    color: white;
+    line-height: 100px;
+}
+
+.contact p {
+    margin: 20px;
+}
+
+.contact a {
+    color: white;
+}
+
+.contact a:hover {
+    color: red;
+}
+
+.contact .bx {
+    font-size: 30px;
+    margin-right: 10px;
+}
+
+/*this is for news and updates*/
+
+.news {
+    width: 100%;
+    height: 100vh;
+    background: rgba(150, 215, 227, 0.4);
+    text-align: center;
+    padding-top: 10%;
+    justify-content: center;
+}
+
+.news h3 {
+    font-size: 60px;
+    font-family: Arial, Helvetica, sans-serif;
+    float: left;
+    margin-left: 40px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgba(10, 23, 62, 1);
+}
+
+.updates img {
+    width: 50%;
+    height: 500px;
+    border-radius: 20px;
+}
+
+
+/*this is for organizations*/
+
+.organizations {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0,0,0,0.6);
+    color: white;
+    text-align: center;
+    justify-content: center;
+}
+
+.organizations h3 {
+    font-size: 70px;
+}
+
+.orgs img {
+    width: 500px;
+    height: 400px;
+    border-radius: 10px;
+}
+
+.bits h2 {
+    font-size: 40px;
+    color: brown;
+    font-weight: 900;
+}
+
+.bits p {
+    font-size: 20px;
+    text-align: justify;
+    padding: 0 40px;
+}
+
+
+/*this is for courses*/
+
+.courses {
+    width: 100%;
+    height: 100vh;
+    background: rgba(29, 72, 202, 0.3);
+    text-align: center;
+    justify-content: center;
+}
+
+.courses h2 {
+    font-size: 70px;
+    padding-top: 100px;
+    padding-bottom: 0px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.offered {
+    margin: 40px auto;
+    background: rgba(0,0,0,0.5);
+    width: 70%;
+    height: 60vh;
+    padding-top: 35px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.offered li {
+    font-size: 30px;
+    text-align: justify;
+    color:white;
+    padding: 10px;
+    margin-top: 10px;
+
+}
+
+
+/*this is for courses*/
+
+.facilities {
+    width: 100%;
+    height: auto;
+    background: rgba(11, 34, 110, 0.411);
+}
+
+.facilities h2 {
+    text-align: center;
+    font-size: 70px;
+    color: white;
+    padding-top: 20px;
+    padding-bottom: 50px;
+}
+
+.urst-facilities {
+    width: 90%;
+    height: 80vh;
+    background: rgba(0,0,0,0.5);
+    margin: auto;
+    position: relative;
+}
+
+.urst-facilities img {
+    width: 400px;
+    height: 400px;
+    margin-top: 40px;
+    margin-left: 10px;
+    border-radius: 30px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.urst-facilities img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 3px rgba(150, 215, 227, 0.4);
+}
+
+
+/*this is for offices*/
+
+.offices {
+    width: 100%;
+    height: auto;
+    background: rgba(11, 34, 110, 0.411);
+}
+
+.offices h2 {
+    text-align: center;
+    font-size: 70px;
+    color: white;
+    padding-top: 20px;
+}
+
+.urst-offices {
+    width: 90%;
+    height: 80vh;
+    background: rgba(0,0,0,0.5);
+    margin: auto;
+    margin-bottom: 5px;
+    position: relative;
+}
+
+.urst-offices img {
+    width: 500px;
+    height: 450px;
+    margin-left: 50px;
+    margin-top: 40px;
+    border-radius: 30px;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.urst-offices img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 3px rgba(150, 215, 227, 0.4);
+}
+
+.name h3 {
+    font-size: 40px;
+    color: white;
+    position: absolute;
+    top: 40%;
+    right: 5%;
+}
+
+
+/*this is for orgchart*/
+
+
+.tree {
+	width: 100%;
+	height: auto;
+	text-align: center;
+}
+
+.tree h2 {
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 15px;
+    font-size: 50px;
+}
+
+.tree ul {
+	padding-top: 20px;
+	position: relative;
+	transition: .5s;
+}
+.tree li {
+	display: inline-table;
+	text-align: center;
+	list-style-type: none;
+	position: relative;
+	padding: 20px;
+	transition: .5s;
+}
+.tree li::before, .tree li::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	right: 50%;
+	border-top: 1px solid #ccc;
+	width: 51%;
+	height: 30px;
+}
+.tree li::after {
+	right: auto;
+	left: 50%;
+	border-left: 1px solid #ccc;
+}
+.tree li:only-child::after, .tree li:only-child::before {
+	display: none;
+}
+.tree li:only-child {
+	padding-top: 0;
+}
+.tree li:first-child::before, .tree li:last-child::after {
+	border: 0 none;
+}
+.tree li:last-child::before {
+	border-right: 1px solid #ccc;
+	border-radius: 0 5px 0 0;
+	-webkit-border-radius: 0 5px 0 0;
+	-moz-border-radius: 0 5px 0 0;
+}
+.tree li:first-child::after {
+	border-radius: 5px 0 0 0;
+	-webkit-border-radius: 5px 0 0 0;
+	-moz-border-radius: 5px 0 0 0;
+}
+.tree ul ul::before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 50%;
+	border-left: 1px solid #ccc;
+	width: 0;
+	height: 20px;
+}
+.tree li a {
+	border: 1px solid #ccc;
+	padding: 10px;
+	display: inline-grid;
+	border-radius: 5px;
+	text-decoration-line: none;
+	border-radius: 5px;
+	transition: .5s;
+}
+.tree li a img {
+	width: 200px;
+	height: 250px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+	margin: auto;
+}
+.tree li a span {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+    margin-top: 10px;
+	color: white;
+    background: rgba(0, 0, 0, 0.5);
+	padding: 8px;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: .5px;
+	font-weight: 500;
+}
+/*Hover-Section*/
+.tree li a:hover, .tree li a:hover i, .tree li a:hover span, .tree li a:hover+ul li a {
+	background: #d8dadb;
+	color: #000;
+	border: 1px solid #94a0b4;
+}
+.tree li a:hover+ul li::after, .tree li a:hover+ul li::before, .tree li a:hover+ul::before, .tree li a:hover+ul ul::before {
+	border-color: #94a0b4;
+}
+
+
+.vl {
+    border-left: 1px solid white;
+    height: 1200px;
+    position: absolute;
+    left: 50%;
+}  
+@media only screen and (max-width: 1300px) {
+    
+
+    .urst-offices img {
+        width: 400px;
+        height: 400px;
+        margin-top: 6%;
+        margin-left: 5%;
+        object-fit: cover;
+    }
+
+    .urst-offices .name h3 {
+        font-size: 35px;
+        float: right;
+    }
+
+    .urst-facilities img {
+        width: 350px;
+        height: 350px;
+        position: relative;
+        left: 18%;
+    }
+
+    .urst-facilities .name h3 {
+        font-size: 50px;
+        position: absolute;
+        top: 85%;
+        left: 58%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .organizations h3 {
+        font-size: 40px;
+        text-align: center;
+    }
+    
+    .orgs img {
+        width: 350px;
+        height: 350px;
+        border-radius: 10px;
+    }
+
+    .bits p {
+        font-size: 16px;
+        font-weight: 500;
+    }
+    
+    .courses h2 {
+        font-size: 50px;
+        padding-top: 50px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .offered {
+        width: 60%;
+        height: 55vh;
+        padding: 20px;
+    }
+    
+    .offered li {
+        font-size: 20px;
+        color:white;
+        margin-top: 20px;
+        text-align: justify;
+    }
+
+    .news {
+        margin-top: 20%;
+    }
+
+    .news .updates img {
+        width: 80%;
+        margin-top: 10%;
+    }
+
+    .news h3 {
+        font-size: 40px;
+        position: absolute;
+        left: 30%;
+    }
+
+    .history {
+        margin-top: 18%;
+    }
+
+    .history h3 {
+        font-size: 50px;
+        line-height: 100px;
+    }
+
+    .context p {
+        font-size: 12px;
+        color: white;
+    }
+
+    #seal h3 {
+        margin-top: 3%;
+        font-size: 40px;
+    }
+
+    #seal img {
+        width: 300px;
+        height: 400px;
+    }
+
+    #seal table {
+        width: 60%;
+    }
+
+    .vision {
+        width: 320px;
+        height: 450px;
+        background:  rgba(198, 198, 198, 0.2);
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .vision h3 {
+        line-height: 70px;
+        color: rgba(10, 23, 62, 1);
+        font-size: 30px;
+        font-family: Arial;
+    }
+    
+    .vision p {
+        font-weight: 600;
+        font-family: arial;
+        font-size: 18px;
+        text-align: justify;
+        padding: 15px;
+        color: white;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 900px) {
+
+    .urst-offices img {
+        width: 350px;
+        height: 350px;
+        margin-left: 10%;
+        margin-top: 15%;
+        float: left;
+    }
+
+    .urst-offices .name h3 {
+        font-size: 27px;
+        float: right;
+        margin-right: 10%;
+    }
+
+    
+    .courses h2 {
+        font-size: 50px;
+        padding-top: 50px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .offered {
+        width: 60%;
+        height: 40vh;
+    }
+
+    
+    .offered li {
+        font-size: 16px;
+        color:white;
+        text-align: justify;
+        margin-top: 10px;
+        padding: 8px;
+    
+    }
+    
+    .organizations h2 {
+        font-size: 25px;
+    }
+    
+    .orgs img {
+        margin-top: 20%;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    .bits p {
+        font-size: 15px;
+        text-align: justify;
+        padding: 40px;
+    }
+
+    .urst-facilities img {
+        width: 350px;
+        height: 350px;
+        position: relative;
+        left: 4%;
+        object-fit: cover;
+        
+    }
+
+    .urst-facilities .name h3 {
+        font-size: 40px;
+        position: absolute;
+        top: 85%;
+    }
+
+    .history {
+        margin-top: 19%;
+    }
+
+    .history h3 {
+        font-size: 35px;
+        line-height: 100px;
+    }
+
+    .context p {
+        font-size: 14px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    #seal h3 {
+        margin-top: 5%;
+        margin-left: -3%;
+        font-size: 30px;
+    }
+
+    #seal img {
+        width: 200px;
+        height: 250px;
+        position: absolute;
+        top: 40%;
+        left: 17%;
+
+    }
+
+    #seal table {
+        width: 60%;
+        margin: auto;
+        margin-left: 6%;
+        font-size: 12px;
+    }
+
+    .vision {
+        margin-top: 10%;
+        width: 250px;
+        height: 300px;
+        background:  rgba(198, 198, 198, 0.2);
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .vision h3 {
+        line-height: 40px;
+        font-size: 25px;
+        font-family: Arial;
+    }
+    
+    .vision p {
+        font-weight: 600;
+        font-family: arial;
+        font-size: 18px;
+        line-height: 20px;
+        text-align: justify;
+        padding: 15px;
+        color: white;
+    }
+
+    .quality-policy h3 {
+        font-size: 40px;
+        font-family: Arial, Helvetica, sans-serif;
+        line-height: 50px;
+        color: rgba(10, 23, 62, 1);
+    }
+    
+    .qp {
+       display: grid;
+       justify-content: center;
+       place-items: center;
+       padding-top: 40px;
+    }
+    
+    .qp p {
+        line-height: 40px;
+        font-size: 18px;
+        font-family: anton;
+        text-align: justify;
+        font-weight: 600;
+    }
+    
+    .contact {
+        width: 100%;
+        height: 100vh;
+        background: linear-gradient(-45deg, rgba(150, 215, 227, 0.4), rgba(10, 23, 62, 1));
+        padding-top: 5%;
+        text-align: center;
+    }
+    
+    .contact h3 {
+        font-size: 40px;
+        color: white;
+        line-height: 100px;
+    }
+    
+    .contact p {
+        margin: 20px;
+    }
+    
+    .contact a {
+        color: white;
+    }
+    
+    .content h1 {
+        color: white;
+        font-size: 25px;
+        line-height: 50px;
+        font-weight: 900;
+    }
+
+    .content p {
+        line-height: 30px;
+    }
+
+    .content {
+        margin-top: 160px;
+    }
+
+    .tree li::after {
+        border: none;
+    }
+
+    .tree ul ul::before {
+        border: none;
+    }
+
+    .tree li::before, .tree li::after {
+        border: none;
+    }
+
+    .vl {
+        display: none;
+    }
+
+    .news {
+        margin-top: 18%;
+    }
+
+    .news h3 {
+        font-size: 40px;
+        position: absolute;
+        left: 25%;
+    }
+
+    .news .updates img {
+        margin-top: 10%;
+        width: 90%;
+        height: 60vh;
+    }
+}
+
+
+@media only screen and (max-width: 800px) {
+
+    .urst-offices img {
+        width: 350px;
+        height: 350px;
+        margin-left: 2%;
+        margin-top: 15%;
+        float: left;
+    }
+
+    .urst-offices .name h3 {
+        font-size: 27px;
+        float: right;
+        margin-right: 5%;
+    }
+
+    
+    .courses h2 {
+        font-size: 50px;
+        padding-top: 50px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .offered {
+        width: 60%;
+        height: 40vh;
+    }
+
+    
+    .offered li {
+        font-size: 16px;
+        color:white;
+        text-align: justify;
+        margin-top: 10px;
+        padding: 8px;
+    
+    }
+    
+    .organizations h2 {
+        font-size: 25px;
+    }
+    
+    .orgs img {
+        margin-top: 20%;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    .bits p {
+        font-size: 15px;
+        text-align: justify;
+        padding: 40px;
+    }
+
+    .urst-facilities img {
+        width: 250px;
+        height: 250px;
+        position: relative;
+        left: 12%;
+        object-fit: cover;
+        
+    }
+
+    .urst-facilities .name h3 {
+        font-size: 40px;
+        position: absolute;
+        top: 80%;
+        left: 56%;
+    }
+
+    .history {
+        margin-top: 20%;
+    }
+
+    .history h3 {
+        font-size: 35px;
+        line-height: 100px;
+    }
+
+    .context p {
+        font-size: 12px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    #seal h3 {
+        margin-top: 5%;
+        margin-left: -3%;
+        font-size: 30px;
+    }
+
+    #seal img {
+        width: 200px;
+        height: 250px;
+        position: absolute;
+        top: 40%;
+        left: 17%;
+
+    }
+
+    #seal table {
+        width: 60%;
+        margin: auto;
+        margin-left: 6%;
+        font-size: 12px;
+    }
+
+    .vision {
+        margin-top: 10%;
+        width: 200px;
+        height: 360px;
+        background:  rgba(198, 198, 198, 0.2);
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .vision h3 {
+        line-height: 40px;
+        font-size: 25px;
+        font-family: Arial;
+    }
+    
+    .vision p {
+        font-weight: 600;
+        font-family: arial;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: justify;
+        padding: 15px;
+        color: white;
+    }
+
+    .news {
+        margin-top: 25%;
+    }
+
+    .news h3 {
+        font-size: 30px;
+        position: absolute;
+        left: 25%;
+    }
+
+    .news .updates img {
+        margin-top: 10%;
+        width: 90%;
+        height: 60vh;
+    }
+
+    .tree h2 {
+        font-size: 45px;
+    }
+}
+
+@media only screen and (max-width: 680px) {
+
+    .urst-offices img {
+        width: 300px;
+        height: 300px;
+        margin-left: 2%;
+        margin-top: 20%;
+        float: left;
+    }
+
+    .urst-offices .name h3 {
+        font-size: 20px;
+        float: right;
+        margin-right: 5%;
+    }
+
+    
+    .courses h2 {
+        font-size: 30px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .offered {
+        width: 60%;
+        height: 40vh;
+    }
+
+    
+    .offered li {
+        font-size: 16px;
+        color:white;
+        text-align: justify;
+        margin-top: 10px;
+        padding: 8px;
+    
+    }
+    
+    .organizations h2 {
+        font-size: 25px;
+    }
+    
+    .orgs img {
+        margin-top: 20%;
+        width: 300px;
+        height: 300px;
+        border-radius: 10px;
+    }
+
+    .bits p {
+        font-size: 15px;
+        text-align: justify;
+        padding: 40px;
+    }
+
+    .urst-facilities img {
+        width: 250px;
+        height: 250px;
+        position: relative;
+        left: 5%;
+        object-fit: cover;
+        
+    }
+
+    .urst-facilities .name h3 {
+        font-size: 40px;
+        position: absolute;
+        top: 80%;
+        left: 54%;
+    }
+
+    .history {
+        margin-top: 30%;
+    }
+
+    .history h3 {
+        font-size: 35px;
+        line-height: 100px;
+    }
+
+    .context p {
+        font-size: 12px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    #seal h3 {
+        margin-top: 5%;
+        margin-left: -3%;
+        font-size: 25px;
+    }
+
+    #seal img {
+        width: 200px;
+        height: 250px;
+        position: absolute;
+        top: 40%;
+        left: 17%;
+
+    }
+
+    #seal table {
+        width: 60%;
+        margin: auto;
+        margin-left: 6%;
+        font-size: 12px;
+    }
+
+    .vision {
+        margin-top: 10%;
+        width: 200px;
+        height: 360px;
+        background:  rgba(198, 198, 198, 0.2);
+        text-align: center;
+        border-radius: 10px;
+    }
+
+    .vision h3 {
+        line-height: 40px;
+        font-size: 25px;
+        font-family: Arial;
+    }
+    
+    .vision p {
+        font-weight: 600;
+        font-family: arial;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: justify;
+        padding: 15px;
+        color: white;
+    }
+
+    .news {
+        margin-top: 25%;
+    }
+
+    .news h3 {
+        font-size: 30px;
+        position: absolute;
+        left: 20%;
+    }
+
+    .news .updates img {
+        margin-top: 10%;
+        width: 90%;
+        height: 55vh;
+    }
+
+    .tree h2 {
+        font-size: 40px;
+    }
+}
+
+@media only screen and (max-width: 420px) {
+
+    html, body {
+        width: 100%;
+        height: 100%;
+    }
+
+    .urst-offices img {
+        width: 200px;
+        height: 200px;
+        margin-left: 23%;
+        margin-top: 10%;
+        float: left;
+    }
+
+    .urst-offices .name h3 {
+        font-size: 20px;
+        position: absolute;
+        top: 70%;
+        left: 28%;
+    }
+    
+    .urst-offices {
+        width: 90%;
+        height: 50vh;
+        background: rgba(0,0,0,0.5);
+    }
+
+
+    .offices h2 {
+        font-size: 40px;
+        color: white;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    
+    .offered {
+        width: 60%;
+        height: 45vh;
+    }
+
+    
+    .offered li {
+        font-size: 12px;
+        color:white;
+        text-align: justify;
+        margin-top: 10px;
+        padding: 8px;
+    
+    }
+    
+    .organizations h2 {
+        font-size: 25px;
+    }
+    
+    .orgs img {
+        margin-top: 20%;
+        width: 150px;
+        height: 150px;
+        border-radius: 10px;
+    }
+
+    .bits p {
+        font-size: 15px;
+        text-align: justify;
+        padding: 40px;
+    }
+
+    .urst-facilities img {
+        width: 150px;
+        height: 150px;
+        position: relative;
+        left: 5%;
+        object-fit: cover;
+        
+    }
+
+    .urst-facilities .name h3 {
+        font-size: 40px;
+        position: absolute;
+        top: 50%;
+        left: 48%;
+    }
+
+    .history {
+        margin-top: 40%;
+    }
+
+    .history h3 {
+        font-size: 30px;
+        line-height: 50px;
+    }
+
+    .context p {
+        font-size: 10px;
+        padding: 10px;
+        width: 100%;
+    }
+
+    #seal h3 {
+        position: absolute;
+        left: 20%;
+        top: 3%;
+        font-size: 30px;
+    }
+
+    #seal img {
+      display: none;
+
+    }
+
+    #seal table {
+        width: 100%;
+        margin-left: -10%;
+        font-size: 10px;
+    }
+
+    .vmgo {
+        width: 100%;
+        height: auto;
+    }
+
+    .vision {
+        margin-top: 10%;
+        width: 100px;
+        height: 300px;
+        background:  rgba(198, 198, 198, 0.2);
+        text-align: center;
+        display: grid;
+        justify-content: center;
+        place-items: center;
+        border-radius: 10px;
+    }
+
+
+    .vision h3 {
+        font-size: 18px;
+        font-family: Arial;
+    }
+    
+    .vision p {
+        font-weight: 600;
+        font-family: arial;
+        font-size: 9px;
+        line-height: 9px;
+        text-align: justify;
+        color: white;
+    }
+
+    .news {
+        margin-top: 40%;
+    }
+
+    .news h3 {
+        font-size: 30px;
+        position: absolute;
+        left: 4%;
+    }
+
+    .news .updates img {
+        margin-top: 18%;
+        width: 95%;
+        height: 45vh;
+    }
+
+    .tree h2 {
+        font-size: 30px;
+    }
+
+    .qp p {
+        font-size: 15px;
+        line-height: 15px;
+        padding: 15px;
+    }
+}
