@@ -399,6 +399,7 @@ table .row {
     background:  rgba(198, 198, 198, 0.2);
     text-align: center;
     border-radius: 10px;
+    color: white;
     padding: 0 30px;
 }
 
@@ -442,10 +443,12 @@ table .row {
 }
 
 .qp p {
-    line-height: 40px;
+    line-height: 50px;
     font-size: 40px;
     color: white;
-    font-family: anton;
+    padding: 20px;
+    text-align: justify;
+    font-family: poppins;
 }
 
 .contact {
