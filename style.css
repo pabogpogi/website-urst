@@ -405,7 +405,7 @@ table .row {
 .vision h3 {
     line-height: 100px;
     font-size: 40px;
-    color: rgb(11, 22, 54);
+    color: white;
     font-family: Arial;
 }
 
@@ -430,7 +430,7 @@ table .row {
     font-size: 60px;
     font-family: Arial, Helvetica, sans-serif;
     line-height: 100px;
-    color: rgba(10, 23, 62, 1);
+    color: white;
 }
 
 .qp {
