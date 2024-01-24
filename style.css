@@ -406,7 +406,7 @@ table .row {
     line-height: 100px;
     font-size: 40px;
     color: white;
-    font-family: Arial;
+    font-family: Anton;
 }
 
 .vision p {
@@ -428,7 +428,7 @@ table .row {
 
 .quality-policy h3 {
     font-size: 60px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Anton;
     line-height: 100px;
     color: white;
 }
